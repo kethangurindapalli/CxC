@@ -16,7 +16,7 @@ export function SocketProvider({ children }) {
       return;
     }
     const token = localStorage.getItem('token');
-    const newSocket = io(window.location.origin, {
+    const newSocket = io('https://cxc-backend-ni6a.onrender.com', {
       auth: { token },
       transports: ['websocket', 'polling']
     });
